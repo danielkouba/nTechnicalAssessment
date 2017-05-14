@@ -9,6 +9,7 @@ var form = {
 	phone: document.getElementById('phone'),
 	phoneLabel: document.getElementById('phLabel'),
 	phoneError: document.getElementById('phError'),
+	phoneInvalid: document.getElementById('phInvalid'),
 	state: document.getElementById('state'),
 	stateLabel: document.getElementById('stLabel'),
 	stateError: document.getElementById('stError'),
@@ -47,6 +48,7 @@ function clearErrors(id){
 	    	form.phone.classList.remove('error');
 	    	form.phoneLabel.classList.remove('hidden');
 	        form.phoneError.classList.add('hidden');
+	        form.phoneInvalid.classList.add('hidden');
 	        break;
 	    case "state":
 	    	form.state.classList.remove('error');
@@ -68,6 +70,7 @@ function clearErrors(id){
 function validateForm(page){
     var x = document.getElementById('form-wrapper');
     var y = document.getElementById('success-wrapper');
+    var test = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})/g;
     var success = true;
 
 	////////////////////////////////////////
@@ -86,16 +89,14 @@ function validateForm(page){
 		page.phone.classList.add('error');
 		page.phoneLabel.classList.add('hidden');
         page.phoneError.classList.remove('hidden');
-	}
+
 	////////////////////////////////////////
 	// Phone number valid?
-	// var test = /^\(?([2-9]\d{2})\)?[- ]?([2-9]\d{2})[- ]?(\d{4})/g;
-	var test = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})/g;
-	if (page.phone.value.match(test) == null){
+	} else if (page.phone.value.match(test) == null){
 		success = false;
 		page.phone.classList.add('error');
 		page.phoneLabel.classList.add('hidden');
-        page.phoneError.classList.remove('hidden');
+        page.phoneInvalid.classList.remove('hidden');
 	}
 
 	////////////////////////////////////////

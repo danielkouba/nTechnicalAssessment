@@ -30,6 +30,7 @@
 	position:absolute;
 	right:0;
 	margin:12px 20px;
+	cursor: pointer;
 }
 
 .content{
@@ -74,14 +75,12 @@ select {
     background: white url("../images/arrow.png") right center no-repeat;
     background-size: 6%;
     padding-right: 20px;
-	/*overflow: hidden;*/
 }
 
 input[type=text]:focus, select:focus, textarea:focus{
 	background-color: #E0F4FF;
 	outline:none;
 	box-shadow: 0px 0px 0px 1px #93B5EC;
-	/*outline-radius:4px;*/
 }
 
 input[type=text]::placeholder{
