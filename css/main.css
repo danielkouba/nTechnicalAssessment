@@ -1,0 +1,147 @@
+#survey {
+  background: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  right: 20px;
+  height: 600px;
+  position: fixed;
+  width: 350px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.head {
+	background-color:#333;
+	height:40px;
+	width:100%;
+	border-bottom:4px solid #1a6b96;
+	color:white;
+}
+
+.head > img {
+	height:26px;
+	margin:7px 0 7px 16px;
+	display: inline-block;
+}
+
+.head > span {
+	position:absolute;
+	right:0;
+	margin:12px 20px;
+}
+
+.content{
+	width:100%;
+	padding:30px 34px;
+}
+
+h2{
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 34px
+}
+
+label{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+form>*{
+	display:block;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 24px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#success-wrapper{
+	line-height: 1.5em;
+}
+
+
+select {
+	height: 39px;
+	-moz-appearance: window;
+    -webkit-appearance: none;
+    background: white url("../images/arrow.png") right center no-repeat;
+    background-size: 6%;
+    padding-right: 20px;
+	/*overflow: hidden;*/
+}
+
+input[type=text]:focus, select:focus, textarea:focus{
+	background-color: #E0F4FF;
+	outline:none;
+	box-shadow: 0px 0px 0px 1px #93B5EC;
+	/*outline-radius:4px;*/
+}
+
+input[type=text]::placeholder{
+	font-style: italic;
+}
+
+textarea{
+	margin-bottom:20px;
+}
+
+input[type=submit] {
+    width: 136px;
+    background-color: #1a6b96;
+    color: white;
+    padding: 10px 20px;
+	margin-bottom:6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button{
+    width: 136px;
+    background-color: #1a6b96;
+    color: white;
+    padding: 10px 20px;
+	margin-bottom:6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.foot {
+	background-color: #ccc;
+	height:28px;
+	padding:7px;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	text-align: center;
+	font-size: 12px;
+}
+
+.error{
+	background-color: #FFBFCB;
+	box-shadow: 0px 0px 0px 1px #FF474F;
+}
+
+.errorLabel{
+	color:#FF474F;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.subtext{
+	font-size:12px;
+}
+
+.hidden {
+	display:none;
+}

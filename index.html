@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Nuance - Automated Solutions - Candidate Assessment</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+
+    <!-- 
+      Most (if not all) of your code should be within this #survey!
+      Please use ./css/main.css and ./js/index.js for additional styles/js 
+      Good luck!
+    -->
+
+    <div id="survey">
+      <div class="head">
+        <!-- logo -->
+        <img src="./images/logo.png">
+        <!-- X -->
+        <span id="close">&times;</span>
+      </div>
+      <div id="form-wrapper" class="content">
+        <h2>How can we help you?</h2>
+        <form action="">
+
+          <!-- full_name    | input    -->
+          <label id="naLabel" for="full_name">* Full Name</label>
+          <label id="naError" for="full_name" class="hidden errorLabel">* Full Name - required</label>
+          <input id="full_name" type="text" name="full_name" placeholder="John Doe">
+
+          <!-- phone_number | input    -->
+          <label id="phLabel" for="phone">* Phone Number</label>
+          <label id="phError" for="phone" class="hidden errorLabel">* Phone Number - Enter a valid phone number</label>
+          <input type="text" id="phone" name="phone" id="phone" placeholder="888-123-4567">
+
+          <!-- state        | select   -->
+          <label id="stLabel" for="state">* State</label>
+          <label id="stError" for="state" class="hidden errorLabel">* State - required</label>
+          <select id="state" name="state">
+            <option class="default-option" value="" selected>Please select a state</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tenessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select> 
+
+          <!-- question     | textarea -->
+          <label id="quLabel">* Please describe your question</label>
+          <label id="quError" class="hidden errorLabel">* Please describe your question - required</label>
+          <textarea id="question" name="question" id="question" cols="30" rows="2"></textarea>
+
+          <!-- Submit -->
+          <div class="align-right">
+            <button type="button" id="submit">Submit</button><br>
+            <span class="subtext">*required field</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Dialog -->
+      <div id="success-wrapper" class="content hidden">
+        <h2>Thank You!</h2>
+        <p>Your information was submitted successfully. We will now connect you to the next available chat agent.</p>
+      </div>
+
+      <!-- Footer -->
+      <div class="foot">
+        <span>Powered By Nuance</span>
+      </div> 
+    </div>
+
+    <!-- You shouldn't need to change any of the code below here -->
+
+    <header>
+      <img src="./images/logo.png">
+    </header>
+    <main>
+      <div class="masthead">
+        <h2>Drive documentation productivity.</h2>
+        <h3>Learn More</h3>
+      </div>
+      <div class="content">
+        <h4>Lorem Ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit, elit venenatis efficitur tempor, massa massa ultricies dolor, nec blandit dui sapien sed mi. Nam id nibh malesuada, pharetra arcu eget, pulvinar dui. Pellentesque sit amet gravida justo. Pellentesque varius purus quis mattis ullamcorper. Nulla felis metus, ornare vitae aliquet sodales, congue et justo. Nulla egestas ex quis luctus aliquet. Praesent suscipit vehicula risus, sed consequat ante malesuada sed. In quis suscipit sapien, eu blandit diam. Morbi volutpat erat purus. Pellentesque vitae pellentesque tortor. In vel tortor porta, egestas ante in, accumsan lorem. Aenean gravida rhoncus elit a iaculis.</p>
+        <p>Vestibulum vitae nulla quis urna blandit rutrum. Sed id luctus est, a laoreet nisl. Aenean nec quam eu lectus pharetra hendrerit a vel metus. Duis vitae elit nibh. Nunc et nulla ultricies est dictum ornare at quis purus. Phasellus at nisl mauris. Nam nec turpis in lacus lacinia posuere. Morbi velit orci, gravida vel ornare at, varius in nulla. Aliquam iaculis, elit convallis laoreet accumsan, tellus sapien lacinia augue, id porttitor mi turpis at sem. Cras posuere elit non augue lobortis molestie. Proin sit amet mi lacus.</p>
+        <p>Sed id odio a magna facilisis viverra. Nam nec faucibus est. Nulla luctus turpis in sodales dictum. Proin eleifend ultricies luctus. Praesent ut arcu vel arcu tristique egestas. Vivamus fringilla id arcu sed dictum. Morbi luctus faucibus consectetur. Fusce ac velit iaculis, convallis ipsum quis, dictum diam. Morbi sit amet sem at sem fermentum gravida. Suspendisse in tellus vulputate, posuere urna interdum, lacinia erat. Fusce nec sem cursus, dictum dolor id, convallis erat. Mauris at dui et elit eleifend ullamcorper. Fusce suscipit purus sit amet diam rhoncus dapibus ut at eros. Praesent commodo dolor accumsan quam euismod tristique. Maecenas luctus nulla ex, eget aliquet nisl ornare ut.</p>
+        <p>Integer ut efficitur lorem, a condimentum massa. Morbi eget mattis erat. Nulla eleifend urna in tristique tincidunt. Pellentesque eu finibus libero, at euismod velit. Nullam ac orci lacinia, pulvinar risus vitae, porttitor erat. Aenean pretium lectus sit amet laoreet ultrices. Fusce mattis gravida enim, nec egestas libero porta eu. Aliquam lorem urna, gravida pretium dapibus quis, facilisis non massa. Suspendisse et efficitur arcu.</p>
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam a est ac odio facilisis facilisis. Maecenas porta gravida quam, ut vehicula dolor tincidunt a. Nullam dictum ante eget eros pretium maximus. Cras tincidunt sagittis velit, non convallis dolor tincidunt ut. Vestibulum posuere lobortis nisl in bibendum. Morbi vehicula eros mi, eget scelerisque dui pulvinar vel. Duis accumsan ligula eu vulputate imperdiet. Nullam viverra sapien id orci malesuada placerat. Vestibulum pulvinar egestas venenatis. Cras velit lorem, condimentum sed iaculis consequat, volutpat at ante. Phasellus eu malesuada dui. Nulla non libero dui.</p>
+      </div>
+    </main>
+    <footer>
+      &copy; 2017 Nuance Communications, Inc.
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
